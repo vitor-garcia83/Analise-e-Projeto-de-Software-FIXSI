@@ -1,7 +1,7 @@
 ===========================================================
                  GUIA DE COLABORAÇÃO — PROJETO FIXSI
 ===========================================================
-Repositório original: https://github.com/Julia-Gabriela/Fixsi
+Repositório original: https://github.com/vitor-garcia83/Analise-e-Projeto-de-Software-FIXSI.git
 
 
 💡 POR QUE ESSE PROCESSO É IMPORTANTE
@@ -22,20 +22,20 @@ sem quebrar o sistema!
 1️⃣  FAZER O FORK
 -----------------------------------------------------------
 1. Acesse o repositório original:
-   https://github.com/Julia-Gabriela/Fixsi
+   https://github.com/vitor-garcia83/Analise-e-Projeto-de-Software-FIXSI
 2. Clique no botão “Fork” (canto superior direito).
 3. Escolha o seu perfil e confirme.
 
 Isso criará uma cópia no seu GitHub:
-   https://github.com/seu-usuario/Fixsi
+   https://github.com/seu-usuario/Analise-e-Projeto-de-Software-FIXSI
 
 
 2️⃣  CLONAR O SEU FORK
 -----------------------------------------------------------
 Abra o terminal e execute:
 
-   git clone https://github.com/seu-usuario/Fixsi.git
-   cd Fixsi
+   git clone https://github.com/seu-usuario/Analise-e-Projeto-de-Software-FIXSI.git
+   cd Analise-e-Projeto-de-Software-FIXSI
 
 (Substitua 'seu-usuario' pelo seu nome de usuário do GitHub.)
 
@@ -44,22 +44,22 @@ Abra o terminal e execute:
 -----------------------------------------------------------
 Para puxar atualizações do repositório principal:
 
-   git remote add upstream https://github.com/Julia-Gabriela/Fixsi.git
+   git remote add upstream https://github.com/vitor-garcia83/Analise-e-Projeto-de-Software-FIXSI.git
 
 Verifique se deu certo:
 
    git remote -v
 
 Você verá algo como:
-   origin    https://github.com/seu-usuario/Fixsi.git (fetch)
-   origin    https://github.com/seu-usuario/Fixsi.git (push)
-   upstream  https://github.com/Julia-Gabriela/Fixsi.git (fetch)
-   upstream  https://github.com/Julia-Gabriela/Fixsi.git (push)
+   origin    https://github.com/seu-usuario/Analise-e-Projeto-de-Software-FIXSI.git (fetch)
+   origin    https://github.com/seu-usuario/Analise-e-Projeto-de-Software-FIXSI.git (push)
+   upstream  https://github.com/vitor-garcia83/Analise-e-Projeto-de-Software-FIXSI.git (fetch)
+   upstream  https://github.com/vitor-garcia83/Analise-e-Projeto-de-Software-FIXSI.git (push)
 
 
 4️⃣  ATUALIZAR SEU FORK COM AS ALTERAÇÕES DO ORIGINAL
 -----------------------------------------------------------
-Sempre que quiser sincronizar com o repositório da Júlia:
+Sempre que quiser sincronizar com o repositório principal:
 
    git checkout main
    git fetch upstream
@@ -93,13 +93,13 @@ Após editar seus arquivos:
 
 7️⃣  CRIAR UM PULL REQUEST (SOLICITAR MERGE)
 -----------------------------------------------------------
-1. Vá até o seu fork: https://github.com/seu-usuario/Fixsi
+1. Vá até o seu fork: https://github.com/seu-usuario/Analise-e-Projeto-de-Software-FIXSI
 2. Clique em “Compare & Pull Request”.
 3. Verifique se está assim:
 
-   Base repository: Julia-Gabriela/Fixsi
+   Base repository: vitor-garcia83/Analise-e-Projeto-de-Software-FIXSI
    Base branch: main
-   Head repository: seu-usuario/Fixsi
+   Head repository: seu-usuario/Analise-e-Projeto-de-Software-FIXSI
    Compare branch: nome-da-sua-branch
 
 4. Escreva uma descrição do que foi feito.
@@ -126,8 +126,8 @@ Depois do merge, limpe as branches antigas:
 
 ✅  RESUMO DOS PRINCIPAIS COMANDOS
 -----------------------------------------------------------
-Clonar seu fork:          git clone https://github.com/seu-usuario/Fixsi.git
-Conectar ao original:     git remote add upstream https://github.com/Julia-Gabriela/Fixsi.git
+Clonar seu fork:          git clone https://github.com/seu-usuario/Analise-e-Projeto-de-Software-FIXSI.git
+Conectar ao original:     git remote add upstream https://github.com/vitor-garcia83/Analise-e-Projeto-de-Software-FIXSI.git
 Atualizar fork:           git fetch upstream && git merge upstream/main
 Criar nova branch:        git checkout -b nome-da-branch
 Enviar branch:            git push origin nome-da-branch
