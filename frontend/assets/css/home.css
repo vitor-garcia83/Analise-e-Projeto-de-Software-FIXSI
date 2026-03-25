@@ -1,8 +1,36 @@
 /* ========================
+   Reset e Estrutura Base (Sticky Footer)
+   ======================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #FFFFFF;
+    /* Remove preenchimentos que causam a barra branca */
+    padding-bottom: 0 !important; 
+}
+
+/* O conteúdo principal deve expandir para empurrar o rodapé */
+main {
+    flex: 1;
+}
+
+/* ========================
    Estilos da Seção "Hero"
    ======================== */
 .hero {
-    padding: 100px 0;
+    padding: 40px 0 30px 0; 
 }
 
 .hero-content {
@@ -13,8 +41,7 @@
 }
 
 .hero-text {
-    flex-basis: 50%; 
-    max-width: 500px;
+    flex: 0 1 500px;
 }
 
 .hero-text h1 {
@@ -22,22 +49,23 @@
     font-weight: 700;
     line-height: 1.3;
     margin-bottom: 20px;
+    color: #05263C;
 }
 
 .highlight-orange {
-    color: var(--orange);
+    color: var(--orange, #FF7A00);
 }
 
 .hero-text p {
     font-size: 1.1rem;
-    color: var(--text-gray);
+    color: #6B6B6B;
     margin-bottom: 35px;
     line-height: 1.7;
 }
 
 .btn-primary {
-    background-color: var(--orange);
-    color: var(--white);
+    background-color: var(--orange, #FF7A00);
+    color: #FFFFFF;
     padding: 16px 32px;
     border-radius: 50px; 
     text-decoration: none;
@@ -53,7 +81,7 @@
 }
 
 .hero-image {
-    flex-basis: 45%; 
+    flex: 0 1 45%; 
     text-align: center;
 }
 
@@ -62,47 +90,171 @@
     height: auto;
 }
 
+/* ========================
+   Seções Globais
+   ======================== */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.bg-light {
+    background-color: #f9f9f9;
+}
 
 /* ========================
-   Estilos Responsivos (Apenas da Seção "Hero")
+   Seção: Serviços em Destaque
    ======================== */
+.services-grid {
+    padding: 30px 0 80px 0; 
+}
 
-/* Para tablets e telas menores (abaixo de 992px) */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 30px;
+    text-align: center;
+}
+
+.service-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--orange, #FF7A00);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.08);
+}
+
+.service-card .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* ========================
+   Seção: Como Funciona
+   ======================== */
+.how-it-works {
+    padding: 80px 0;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: center;
+}
+
+.step {
+    flex: 1;
+    padding: 20px;
+}
+
+.step-number {
+    background-color: var(--orange, #FF7A00);
+    color: #fff;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 25px auto;
+}
+
+/* ========================
+   Seção: Chamada para Profissionais (CTA) - CORRIGIDO
+   ======================== */
+.pro-cta {
+    background-color: var(--orange, #FF7A00);
+    color: #FFFFFF;
+    padding: 80px 0; /* Aumentamos o enchimento para dar respiro em cima e embaixo */
+    text-align: center;
+    margin-top: 0; 
+}
+
+.pro-cta h2 {
+    font-size: 2.2rem;
+    margin-bottom: 25px; /* Espaço entre o título e a frase */
+    font-weight: 700;
+}
+
+.pro-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 45px; /* ESTA LINHA É A CHAVE: cria o espaço entre a frase e o botão */
+    opacity: 0.95;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-secondary {
+    background-color: #FFFFFF;
+    color: var(--orange, #FF7A00);
+    padding: 16px 40px; /* Botão um pouco mais robusto */
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================
+   Rodapé (Footer) - Padronizado
+   ======================== */
+.footer {
+    background-color: #2C2C2C;
+    color: #999;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    width: 100%;
+    /* Mágica do Sticky Footer */
+    margin-top: auto; 
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* ========================
+   Media Queries
+   ======================== */
 @media (max-width: 992px) {
     .hero-content {
         flex-direction: column;
         text-align: center;
         gap: 40px;
     }
-
-    .hero-text {
-        max-width: 100%;
-    }
+    .hero-text { flex-basis: auto; }
 }
 
-/* Para celulares (abaixo de 768px) */
 @media (max-width: 768px) {
-    .hero {
-        padding: 60px 0;
-    }
-
-    .hero-text h1 {
-        font-size: 2.2rem; 
-    }
-
-    .hero-text p {
-        font-size: 1rem; 
-    }
-
-    .btn-primary {
-        padding: 14px 28px; 
-        font-size: 1rem;
-    }
-}
-
-/* Ajuste fino para celulares bem pequenos (abaixo de 480px) */
-@media (max-width: 480px) {
-    .hero-text h1 {
-        font-size: 1.8rem; 
-    }
+    .hero { padding: 40px 0; }
+    .hero-text h1 { font-size: 2.2rem; }
+    .steps-container { flex-direction: column; }
+    .pro-cta { padding: 50px 20px; }
 }
